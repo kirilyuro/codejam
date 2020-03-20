@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steed2CruiseControl", "Steed2CruiseControl\Steed2CruiseControl.csproj", "{B32BB038-7809-45B6-A40C-DFD82863672A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B32BB038-7809-45B6-A40C-DFD82863672A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32BB038-7809-45B6-A40C-DFD82863672A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32BB038-7809-45B6-A40C-DFD82863672A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32BB038-7809-45B6-A40C-DFD82863672A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

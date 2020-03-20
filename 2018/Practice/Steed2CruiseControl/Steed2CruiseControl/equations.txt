@@ -1,0 +1,20 @@
+x=vt
+
+t = x/v
+
+x/va = (x-pi)/vi
+
+x/va = x/vi-pi/vi
+
+x/va - x/vi = -pi/vi
+
+x(1/va-1/vi)= -pi/vi
+
+x = pi/(vi(1/vi-1/va) = pi/(1-vi/va)
+
+
+---------------------------------------------------
+
+d/va = (d-pi)/vi
+
+va = d*vi/(d-pi)
