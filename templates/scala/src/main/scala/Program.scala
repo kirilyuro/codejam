@@ -184,7 +184,7 @@ object IO {
       writeLineExplicit(getTypeFormats(classTag[T1], classTag[T2], classTag[T3], classTag[T4]), v1, v2, v3, v4)
 
     def writeCaseExplicit(caseNumber: Int, types: String, values: Any*): Unit = {
-      writer.write(s"Case #$caseNumber:")
+      writer.write(s"Case \u0023$caseNumber:")
       if (values.nonEmpty) writer.write(" ")
       writeLineExplicit(types, values:_*)
     }
