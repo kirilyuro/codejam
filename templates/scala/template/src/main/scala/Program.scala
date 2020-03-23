@@ -204,7 +204,10 @@ object IO {
     def writeCase[T1: ClassTag, T2: ClassTag, T3: ClassTag, T4: ClassTag](caseNumber: Int, v1: T1, v2: T2, v3: T3, v4: T4): Unit =
       writeCaseExplicit(caseNumber, getTypeFormats(classTag[T1], classTag[T2], classTag[T3], classTag[T4]), v1, v2, v3, v4)
 
-    override def close(): Unit = writer.close()
+    override def close(): Unit = {
+      writer.flush()
+      writer.close()
+    }
   }
 }
 
