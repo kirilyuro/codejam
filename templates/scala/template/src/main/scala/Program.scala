@@ -1,5 +1,7 @@
+import scala.collection.mutable
+
 class CaseSolution(caseNumber: Int, in: IO.Input, out: IO.Output)
-  extends Solution.CaseSolutionBase(caseNumber: Int, in: IO.Input, out: IO.Output)
+  extends Solution.CaseSolutionBase(caseNumber, in, out)
 //    with GlobalExecutionContext
 {
   import in._, out._, Math._
@@ -52,7 +54,7 @@ object IO {
   import java.io.{InputStream, OutputStream, Closeable}
   import reflect._
 
-  val InputBufferSize: Int = 1024 * 1024 * 5 // 5MiB
+  private val InputBufferSize: Int = 1024 * 1024 * 5 // 5MiB
 
   object Format {
     val Int = 'i'
@@ -218,14 +220,19 @@ trait Utils {
     def isWhole: Boolean = abs(floor(value) - value) < Double.MinPositiveValue
   }
 
-  implicit class TapOps[T](value: T) {
+  implicit class RichGeneric[T](value: T) {
     def tap(f: T => Unit): T = { f(value); value }
+    def some: Option[T] = Some(value)
   }
 
   def memoize[A, B](f: A => B): A => B =
     new collection.mutable.HashMap[A, B]() {
       override def apply(a: A): B = getOrElseUpdate(a, f(a))
     }
+
+  def repeat[A](elem: A, times: Int): mutable.ArrayBuffer[A] = mutable.ArrayBuffer.fill(times)(elem)
+  def repeat2D[A](elem: A, rows: Int, columns: Int): mutable.ArrayBuffer[mutable.ArrayBuffer[A]] =
+    mutable.ArrayBuffer.fill(rows, columns)(elem)
 }
 
 trait GlobalExecutionContext {
